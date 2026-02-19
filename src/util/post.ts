@@ -3,9 +3,10 @@ import { RichText } from "@atproto/api";
 import sharp from "sharp";
 import type { mastodon as mastoType } from "masto";
 import type { TwitterApiReadWrite } from "twitter-api-v2";
-import type { Clients, CustomTumblrClient } from "./login";
+import type { Clients, CustomTumblrClient } from "./login.js";
 
-export default async function post(blogpost: Object, clients: Clients) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function post(blogpost: any, clients: Clients) {
   for (const client of clients.bluesky) {
     await bluesky(client, blogpost);
   }
@@ -25,6 +26,7 @@ export default async function post(blogpost: Object, clients: Clients) {
   return clients;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function bluesky(client: AtpAgent, blogpost: any, imageQuality = 100) {
   try {
     const formattedPost = `${blogpost.title}\n\n${blogpost.url}`;
@@ -64,7 +66,7 @@ async function bluesky(client: AtpAgent, blogpost: any, imageQuality = 100) {
     });
 
     console.log(`[info]: posted to bluesky - @${client.session!.handle}`);
-  } catch (e: any) {
+  } catch (e) {
     // if the image is too large we set a lower compression level
     if (e.error === "BlobTooLarge") {
       const newImageQuality = imageQuality - 10;
@@ -81,11 +83,12 @@ async function bluesky(client: AtpAgent, blogpost: any, imageQuality = 100) {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function mastodon(client: mastoType.rest.Client, blogpost: any) {
   try {
     const formattedPost = `${blogpost.title}\n\n${blogpost.url}`;
 
-    const status = await client.v1.statuses.create({
+    await client.v1.statuses.create({
       status: formattedPost,
     });
 
@@ -99,6 +102,7 @@ async function mastodon(client: mastoType.rest.Client, blogpost: any) {
 
 async function tumblr(
   { client, blogIdentifier }: CustomTumblrClient,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   blogpost: any,
 ) {
   try {
@@ -131,6 +135,7 @@ async function tumblr(
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function twitter(client: TwitterApiReadWrite, blogpost: any) {
   try {
     const formattedPost = `${blogpost.title}\n\n${blogpost.url}`;

@@ -4,9 +4,11 @@
   "description": "Ingest a Ghost webhook and post to the major social media platforms.",
   "main": "src/app.ts",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node dist/src/index.js",
     "dev": "npx tsx --watch  src/index.ts",
+    "build": "GHOSTPOSTER_BUILDING=true tsc",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
@@ -20,6 +22,12 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@types/express": "^5.0.6"
+    "@eslint/js": "^9.39.2",
+    "@eslint/json": "^1.0.1",
+    "@types/express": "^5.0.6",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "jiti": "^2.6.1",
+    "typescript-eslint": "^8.56.0"
   }
 }

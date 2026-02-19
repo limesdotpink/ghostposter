@@ -1,9 +1,9 @@
 services:
   crossposter:
-    # build: .
-    image: ghcr.io/gitlimes/ghostposter:latest
+    #build: .
+    image: ghcr.io/limesdotpink/ghostposter:v2.0.0
     ports:
       - '3000:3000'
     volumes:
-    - ./accounts.json:/usr/src/app/accounts.json
+    - ./config.json:/usr/src/app/config.json
 

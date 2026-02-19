@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "esModuleInterop": true,
+    "target": "es2024",
+    "sourceMap": true,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  }
+}

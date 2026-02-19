@@ -7,6 +7,18 @@ So far, this supports Bluesky, Twitter, Mastodon and Tumblr.
 
 Create a `config.json`, using the example file as reference.
 
+Then, either
+```
+npm i
+npm run build
+npm start
+```
+
+or
+```
+docker compose up -d
+```
+
 ### Bluesky
 For the password, generate an App Password.
 

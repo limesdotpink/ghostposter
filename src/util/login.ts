@@ -1,6 +1,7 @@
 import { AtpAgent } from "@atproto/api";
 import { createRestAPIClient } from "masto";
 import type { mastodon } from "masto";
+import type Config from "../types/Config.js";
 import * as tumblr from "tumblr.js";
 import { TwitterApi, TwitterApiReadWrite } from "twitter-api-v2";
 
@@ -17,8 +18,8 @@ export type Clients = {
   logins: number;
 };
 
-export default async function login(accounts: Array<any>) {
-  let clients: Clients = {
+export default async function login(accounts: Config["accounts"]) {
+  const clients: Clients = {
     bluesky: [],
     mastodon: [],
     tumblr: [],
@@ -172,7 +173,7 @@ export default async function login(accounts: Array<any>) {
   return clients;
 }
 
-function parseAccounts(accounts: Array<any>) {
+function parseAccounts(accounts: Config["accounts"]) {
   const parsedAccounts = {
     bluesky: accounts.filter((a) => a.type === "bluesky"),
     mastodon: accounts.filter((a) => a.type === "mastodon"),
