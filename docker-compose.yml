@@ -1,5 +1,5 @@
 services:
-  crossposter:
+  ghostposter:
     #build: .
     image: ghcr.io/limesdotpink/ghostposter:v2.0.0
     ports:
