@@ -4,3 +4,6 @@ services:
     image: ghcr.io/gitlimes/ghostposter:latest
     ports:
       - '3000:3000'
+    volumes:
+    - ./accounts.json:/usr/src/app/accounts.json
+

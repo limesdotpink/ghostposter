@@ -1,0 +1,35 @@
+{
+  "ghostWebhookSecret": "qwertyuiopasdfghjklzxcvbnm",
+  "accounts": [
+    {
+      "type": "bluesky",
+      "identifier": "limes.pink",
+      "password": "123456"
+    },
+    {
+      "type": "bluesky",
+      "identifier": "microsoftgithub.com",
+      "password": "123456"
+    },
+    {
+      "type": "mastodon",
+      "url": "https://fedi.limes.pink",
+      "accessToken": "qwertyuiopasdfghjklzxcvbnm"
+    },
+    {
+      "type": "tumblr",
+      "consumerKey": "qwertyuiop",
+      "consumerSecret": "asdfghjkl",
+      "token": "zxcvbnm",
+      "token_secret": "1234567890",
+      "blogIdentifier": "limesdotpink"
+    },
+    {
+      "type": "twitter",
+      "appKey": "qwertyuiop",
+      "appSecret": "asdfghjkl",
+      "accessToken": "zxcvbnm",
+      "accessSecret": "1234567890"
+    }
+  ]
+}

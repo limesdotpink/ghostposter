@@ -1,25 +1,25 @@
 {
   "name": "ghostposter",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Ingest a Ghost webhook and post to the major social media platforms.",
-  "main": "src/app.js",
+  "main": "src/app.ts",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js",
+    "dev": "npx tsx --watch  src/index.ts",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
   "dependencies": {
     "@atproto/api": "^0.15.17",
-    "dotenv": "^8.2.0",
     "express": "^4.22.1",
     "masto": "^7.1.0",
     "sharp": "^0.34.2",
     "tumblr.js": "^5.0.1",
-    "twitter-api-v2": "^1.23.2"
+    "twitter-api-v2": "^1.23.2",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.10"
+    "@types/express": "^5.0.6"
   }
 }
