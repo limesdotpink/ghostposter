@@ -4,6 +4,7 @@ services:
     image: ghcr.io/limesdotpink/ghostposter:v2.0.0
     ports:
       - '3000:3000'
+    hostname: ghostposter.local
     volumes:
     - ./config.json:/usr/src/app/config.json
 
