@@ -19,6 +19,9 @@ or
 docker compose up -d
 ```
 
+P.S: If you're running this with docker compose, you must give the container a hostname (e.g. ghostposter.local), or Ghost will refuse to send a webhook to the container. If you configured this the same way as the `docker-compose.yml` in this repo, the webhook ingest url
+will be `http://ghostposter.local:3000/hook`.
+
 ### Bluesky
 For the password, generate an App Password.
 
