@@ -5,6 +5,7 @@ services:
     ports:
       - '3000:3000'
     hostname: ghostposter.local
+    restart: unless-stopped
     volumes:
     - ./config.json:/usr/src/app/config.json
 
