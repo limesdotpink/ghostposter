@@ -35,3 +35,7 @@ Create an application with the `profile` and `write:statuses` scopes. Leave the 
 
 ### Twitter
 You're on your own here.
+
+<br>
+<br>
+<p align="right">made with ❤ by <a href="https://limes.pink" target="_blank">limes.pink</a></p>
