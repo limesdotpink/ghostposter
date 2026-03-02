@@ -1,9 +1,9 @@
 # ghostposter
 
-![ghostposter_hero](https://github.com/user-attachments/assets/fde979e0-ade9-4fbb-a34f-e2a90c9c1c07)
-
 Ingest a Ghost webhook and post to the major social media platforms.
-Currently supports Bluesky, Mastodon, and Tumblr. Twitter is provided as-is, and may need further testing.
+Currently supports Bluesky, Mastodon, and Tumblr. Twitter is provided as-is, and may need testing.
+
+![ghostposter_hero](https://github.com/user-attachments/assets/fde979e0-ade9-4fbb-a34f-e2a90c9c1c07)
 
 ## Setup
 
