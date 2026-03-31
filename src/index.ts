@@ -27,6 +27,8 @@ if (process.env.GHOSTPOSTER_BUILDING) {
   const app = express();
   const port = 3000;
 
+  app.use(express.json({ limit: "100mb" }));
+
   // if we're missing GHOST_WEBHOOK_SECRET we can't verify that hooks are actually coming from ghost. Abort.
   if (!config.ghostWebhookSecret) {
     throw new Error(
@@ -40,7 +42,7 @@ if (process.env.GHOSTPOSTER_BUILDING) {
   }
 
   // endpoint receiving the webhook
-  app.post("/hook", express.json(), (req, res) => {
+  app.post("/hook", (req, res) => {
     const signatureHeader = req.headers["x-ghost-signature"] as
       | string
       | undefined;
