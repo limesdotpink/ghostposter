@@ -1,6 +1,6 @@
 {
   "name": "ghostposter",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Ingest a Ghost webhook and post to the major social media platforms.",
   "main": "src/app.ts",
   "scripts": {
