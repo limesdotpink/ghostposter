@@ -14,7 +14,7 @@
   "type": "module",
   "dependencies": {
     "@atproto/api": "^0.15.17",
-    "express": "^4.22.1",
+    "express": "^4.22.2",
     "masto": "^7.1.0",
     "sharp": "^0.34.2",
     "tumblr.js": "^5.0.1",
